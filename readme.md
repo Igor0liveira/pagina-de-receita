@@ -1,4 +1,4 @@
-# Frontend Mentor - Landig Page 3 Colunas
+# Frontend Mentor - Página de Receitas
 
 <p><b>Esta é uma solucção para o desafio do site Frontend Mentor, onde estou desenvolvendo minhas habilidades de HTML e CSS.</b></p>
 
