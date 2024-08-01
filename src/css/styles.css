@@ -1,0 +1,197 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-stone-100);
+    padding: 6rem;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: minmax(30rem, 80rem);
+    grid-template-areas: "img"
+    "description"
+    "time"
+    "ingredients"
+    "intructions"
+    "nutrition";
+    background-color: var(--color-white);
+    padding: 4rem;
+    border-radius: 2rem;
+    grid-gap: 2.8rem;
+}
+
+
+
+.container .img{
+    display: grid;
+    grid-area: img;
+}
+
+.container .img img{
+    width: 100%;
+    border-radius: 1.6rem;
+}
+
+.container .description{
+    display: grid;
+    grid-area: description;
+}
+
+.container .description .principal-title{
+    font-family: "Young Serif";
+    text-transform: capitalize;
+    font-size: 3.4rem;
+    font-weight: 400;
+}
+
+.container .time{
+    display: grid;
+    grid-area: time;
+    background-color: var(--color-rose-50);
+    padding: 2rem;
+    border-radius: 1.6rem;
+}
+
+.container .time ul li{
+    color: var(--color-rose-800);
+    
+}
+
+.container .time .time-title{
+    font-family: "Outfit";
+    color: var(--color-rose-800);
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.container .ingredients{
+    display: grid;
+    grid-area: ingredients;
+}
+
+
+.container .intructions{
+    display: grid;
+    grid-area: intructions;
+}
+
+.container .intructions ol {
+    font-weight: 900;
+    font-family: "Outfit";
+}
+
+.container .intructions ol li{
+    list-style: decimal;
+}
+
+.container .nutrition{
+    display: grid;
+    grid-area: nutrition;
+}
+
+.container .nutrition .dados{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 0.1rem solid var(--color-stone-150);
+    padding-bottom: 1.6rem;
+}
+
+.container .nutrition .dados:nth-child(1){
+    margin-top: 1.8rem;
+}
+
+.container .nutrition .dados p{
+    margin-left: 2rem;
+}
+
+.container .nutrition .dados:nth-last-child(1){
+    border-bottom: 0;
+}
+
+.number{
+    font-family: "Outfit";
+    color: var(--color-brown);
+    font-weight: 600;
+}
+
+.text{
+    font-family: "Outfit";
+    color: var(--color-stone-600);
+    line-height: 2.6rem;
+    font-weight: 400;
+}
+
+.subtitle{
+    color: var(--color-stone-900);
+    font-weight: 600;
+}
+
+.secundary-title{
+    color: var(--color-brown);
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    font-family: "Young Serif";
+    font-weight: 400;
+}
+
+.container .description, .time, .ingredients, .intructions, .nutrition{
+    gap: 1.6rem;
+}
+
+.container .ingredients, .intructions{
+    border-bottom: 0.1rem solid var(--color-stone-150);
+    border-radius: 0.2rem;
+    
+}
+
+.container .time ul li, .ingredients ul li, .intructions ol li{
+    list-style:  outside;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+}
+
+.container .ingredients ul li:nth-last-child(1), .intructions ol li:nth-last-child(1){
+    margin-bottom: 4rem;
+}
+
+
+.container .ingredients ul li, .intructions ol li{
+    color: var(--color-brown);
+}
+
+
+
+
+
+
+/* ==== Responsive ==== */
+
+@media(max-width:501px){
+    body{
+        padding: 0;
+    }
+
+    .container{
+        grid-template-columns: 1fr;
+        border-radius: 0;
+        padding: 0;
+        grid-gap: 1.8rem;
+    }
+
+    .container .img img{
+        border-radius: 0;
+    }
+
+    .container .time{
+        margin: 0 2rem;
+    }
+
+    .container .description, .time, .ingredients, .intructions, .nutrition{
+        padding: 2rem;
+        margin: 2rem;
+    }
+    
+}
